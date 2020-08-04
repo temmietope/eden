@@ -1,0 +1,1060 @@
+@font-face {
+  font-family: Cerebri Sans;
+  src: url('./assets/fonts/CerebriSans-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'PT Serif', serif;
+  background-color: #f9fefb;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 20%;
+  background-color: #f9fefb;
+  padding: 1.4rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.profile {
+  width: 100%;
+  height: 3.185rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile__avatar {
+  width: 3.1875rem;
+  height: 3.1875rem;
+  background-color: #ffb48f;
+  border-radius: 50%;
+  margin-right: 3%;
+}
+
+.profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.profile p {
+  font-size: 1.5rem;
+  color: #121212;
+  font-family: 'PT Serif';
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 1.2rem 0;
+}
+
+.schedule h1 {
+  color: #121212;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.schedule button {
+  outline: none;
+  border: 0;
+  height: 2rem;
+  width: 12rem;
+  border-radius: 100px 100px;
+  background-color: rgba(255, 157, 0, 0.05);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.04);
+  font-size: 0.95rem;
+  color: #e78f00;
+  border: 1px solid #e78f00;
+  font-family: Cerebri Sans;
+  cursor: pointer;
+}
+
+.cards {
+  height: 12.25rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  height: 5.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border-radius: 6px;
+  font-family: Cerebri Sans;
+}
+
+.card--green {
+  background-color: rgba(0, 194, 103, 0.1);
+}
+
+.card--green .card__button {
+  background-color: #00c267;
+}
+
+.card--orange {
+  background-color: #f9f5e1;
+}
+
+.card--orange .card__button {
+  background-color: #ffbe56;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.card--green .card__button p:nth-child(1) {
+  text-decoration: line-through;
+  font-weight: lighter;
+  margin-bottom: 3%;
+}
+
+.card__description {
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.card__description p {
+  color: #1b1b1b;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.getting-started {
+  width: 100%;
+  height: 20.75rem;
+  background-color: #e4f5fd;
+  margin: 2rem 0;
+  padding: 5%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.getting-started .getting-started__header {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 20%;
+}
+
+.getting-started .getting-started__header h3 {
+  color: #121212;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.getting-started .getting-started__header p {
+  color: #383838;
+  font-family: Cerebri Sans;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+.getting-started__actions {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  justify-content: space-between;
+  height: 70%;
+}
+
+.getting-started__action {
+  padding: 6% 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 3rem auto 2rem;
+}
+
+.getting-started__action__image {
+  width: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.action--call .getting-started__action__image {
+  background-color: rgba(190, 164, 255, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.action--play .getting-started__action__image {
+  background-color: rgba(255, 146, 101, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.getting-started__action__image img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+}
+
+.getting-started__action h5 {
+  color: #383838;
+  font-family: Cerebri Sans;
+  line-height: 20px;
+  font-weight: 300;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.getting-started__action p {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.getting-started__action span {
+  font-family: Cerebri Sans;
+  text-decoration: underline;
+}
+
+.action--call span {
+  color: #8a5cff;
+}
+
+.action--play span {
+  color: #ff682a;
+}
+
+.getting-started__action p img {
+  margin-left: 1rem;
+  width: 1rem;
+}
+
+.activity__card {
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.activity__card h2 {
+  color: #00c267;
+  font-family: 'PT Serif';
+  font-size: 1.325rem;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.activity__card__detail {
+  height: 70%;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  width: 100%;
+}
+
+.activity__card__detail p {
+  font-family: 'Cerebri Sans';
+  font-size: 0.9rem;
+}
+
+.activity__card__detail p:nth-child(2) {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #e4f5fd;
+  display: flex;
+  align-items: center;
+  color: #121212;
+  font-family: Cerebri Sans;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 19px;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+}
+
+.footer__wrapper {
+  background-color: rgba(244, 244, 244, 0.75);
+  height: 100%;
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.footer__wrapper li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.footer__wrapper li img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.footer__wrapper li p {
+  color: #303030;
+  font-family: Cerebri Sans;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.modal__card {
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card--orange {
+  justify-content: stretch;
+}
+
+.modal__card .modal__backdrop {
+  display: none;
+  content: '';
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal__card.active .modal__backdrop {
+  display: block;
+}
+
+.modal__card .modal__card__content {
+  width: calc((var(--initial-width) / var(--document-width)) * 100%);
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  transition-property: transform, height, width;
+  -webkit-transition-property: transform, height, width;
+  -moz-transition-property: transform, height, width;
+  -ms-transition-property: transform, height, width;
+  height: 5.5rem;
+  overflow: hidden;
+  position: absolute;
+  transform: scale(1);
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__card.active .modal__card__content {
+  transform: scale(1.2) translate(0, -100px);
+  height: 85vh;
+  top: var(--percent-top);
+  z-index: 999;
+  border-radius: 20px 20px 0 0;
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  backface-visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -webkit-transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -moz-transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -ms-transition: transform 400ms ease, opacity 200ms linear 200ms;
+}
+
+.modal.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal__wrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 20%;
+  padding-top: 10.0625rem;
+  position: relative;
+}
+
+.modal__body {
+  position: absolute;
+  width: 100%;
+  height: initial;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal__header {
+  height: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #121212;
+  font-family: 'PT Serif';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 20px 20px 0 0;
+  background-color: #f9f5e1;
+  box-sizing: border-box;
+}
+
+.modal__header h3 {
+  padding: 2.5rem;
+  box-sizing: border-box;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modal__header button {
+  width: 25%;
+  border: none;
+  outline: none;
+  height: 100%;
+  border-radius: 0 20px 0 0;
+  background-color: #ffbe56;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.modal__header button img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.modal__list {
+  padding: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: inherit;
+  display: flex;
+  flex-flow: column;
+  overflow-y: auto;
+}
+
+.modal__list::-webkit-scrollbar {
+  width: 0px;
+  background-color: #f5f5f5;
+}
+
+.modal__list li {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.9rem;
+  box-sizing: border-box;
+}
+
+.modal__list li img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.modal__list__food {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1.75rem;
+  box-sizing: border-box;
+}
+
+.modal__list__food h6 {
+  color: #303030;
+  font-family: Cerebri Sans;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.modal__list__food p {
+  color: #6c6c6c;
+  font-family: Cerebri Sans;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.modal__footer {
+  justify-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 3.125rem;
+  margin-bottom: 5%;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: transform 400ms ease, opacity 300ms linear 200ms;
+}
+
+.lightbox.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.lightbox__image {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -webkit-transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -moz-transition: transform 400ms ease, opacity 200ms linear 200ms;
+  -ms-transition: transform 400ms ease, opacity 200ms linear 200ms;
+}
+
+.lightbox img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+@media only screen and (max-width: 900px) {
+  .container,
+  .footer__wrapper,
+  .modal__wrapper {
+    margin: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .container,
+  .footer__wrapper,
+  .modal__wrapper {
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem 1.75rem;
+  }
+
+  .container,
+  .footer__wrapper,
+  .modal__wrapper {
+    margin: 0;
+    box-shadow: 0;
+  }
+
+  .profile {
+    width: 100%;
+    height: 2.1875rem;
+  }
+
+  .profile__avatar {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+
+  .profile p {
+    font-size: 1.0625rem;
+  }
+
+  .schedule {
+    height: 2.8rem;
+  }
+
+  .schedule h1 {
+    font-size: 1.75rem;
+  }
+
+  .schedule button {
+    height: 1.5625rem;
+    width: 8.75rem;
+    border-radius: 13px;
+    font-size: 0.75rem;
+  }
+
+  .cards {
+    height: 9.25rem;
+  }
+
+  .card,
+  .modal__card,
+  .modal__card__content {
+    height: 4rem;
+  }
+
+  .modal__card .modal__card__content {
+    height: 4rem;
+  }
+
+  .modal__card.active .modal__card__content {
+    background-color: white;
+    height: 75vh;
+    padding: 0;
+    transform: scale(calc(var(--document-width) / var(--initial-width)))
+      translate(0, -100px);
+  }
+
+  .card__description {
+    padding: 0.5rem;
+  }
+
+  .card__description p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .card--orange .card__description p {
+    width: 95%;
+  }
+
+  .card__button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .getting-started {
+    height: 15.75rem;
+    padding: 4%;
+  }
+
+  .getting-started .getting-started__header h3 {
+    font-size: 1.0625rem;
+    line-height: 1.25rem;
+  }
+
+  .getting-started .getting-started__header p {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .getting-started__action {
+    padding: 10% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+  }
+
+  .getting-started__action__image {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .getting-started__action h5 {
+    font-size: 0.875rem;
+    height: auto;
+    margin: 3% 0;
+    width: 100%;
+  }
+
+  .getting-started__action p {
+    font-size: 0.875rem;
+  }
+
+  .getting-started__action p img {
+    margin-left: 0.5rem;
+    width: 0.875rem;
+  }
+
+  .activity__card h2 {
+    font-size: 1.0625rem;
+    line-height: 22px;
+  }
+
+  .activity__card__detail p {
+    font-size: 0.75rem;
+  }
+
+  .activity__card__detail p:nth-child(2) {
+    line-height: 19px;
+    font-size: 0.9375rem;
+  }
+
+  footer {
+    height: 4.625rem;
+  }
+
+  .footer__wrapper {
+    padding: 0.625rem 1.875rem 1.25rem 1.875rem;
+  }
+
+  .footer__wrapper li img {
+    height: 1.25rem;
+  }
+
+  .footer__wrapper li p {
+    font-size: 0.75rem;
+  }
+
+  .modal__wrapper {
+    padding-top: 8.0625rem;
+  }
+
+  .modal__header {
+    height: 5.4375rem;
+  }
+
+  .modal__header h3 {
+    padding: 1.875rem;
+    font-size: 1.25rem;
+  }
+
+  .modal__header button img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+
+  .modal__list {
+    padding: 1.875rem;
+  }
+
+  .modal__list li {
+    height: 3.75rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .modal__list li img {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .modal__list__food {
+    margin-left: 1.25rem;
+  }
+
+  .modal__list__food h6 {
+    font-size: 1.125rem;
+  }
+
+  .modal__list__food p {
+    font-size: 0.9375rem;
+  }
+
+  .modal__footer {
+    height: 2.125rem;
+  }
+
+  .modal__footer img {
+    width: 8.375rem;
+    height: 0.3125rem;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card__description p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    padding: 1rem 0.8rem;
+  }
+
+  .profile__avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .profile p {
+    font-size: 0.9rem;
+  }
+
+  .schedule button {
+    font-size: 0.7rem;
+  }
+
+  .cards {
+    height: 11.5rem;
+  }
+
+  .card,
+  .modal__card,
+  .modal__card__content {
+    height: 5rem;
+  }
+
+  .modal__card .modal__card__content {
+    height: 5rem;
+  }
+
+  .getting-started {
+    padding: 5%;
+  }
+
+  .getting-started__action__image {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .getting-started__action p img {
+    margin-left: 0.4rem;
+    width: 0.75rem;
+  }
+
+  .activity__card {
+    height: 7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .activity__card h2 {
+    font-size: 0.9rem;
+  }
+
+  .activity__card__detail p {
+    font-size: 0.65rem;
+  }
+
+  .activity__card__detail p:nth-child(2) {
+    line-height: 19px;
+    font-size: 0.7375rem;
+  }
+
+  footer {
+    height: 4rem;
+  }
+
+  .footer__wrapper {
+    padding: 0.5rem 1.3rem 1rem 1.3rem;
+  }
+
+  .footer__wrapper li img {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .modal__wrapper {
+    padding-top: 5rem;
+  }
+
+  .modal__header {
+    height: 4rem;
+    font-size: 1rem;
+  }
+
+  .modal__header h3 {
+    padding: 1.4rem;
+  }
+
+  .modal__header button img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .modal__list {
+    padding: 1.4rem;
+  }
+
+  .modal__list li {
+    height: 2.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .modal__list li img {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+
+  .modal__list__food {
+    margin-left: 5%;
+  }
+
+  .modal__list__food h6 {
+    font-size: 0.9rem;
+  }
+
+  .modal__list__food p {
+    font-size: 0.75rem;
+  }
+
+  .modal__footer {
+    height: 1.9rem;
+  }
+
+  .modal__footer img {
+    width: 6.375rem;
+    height: 0.3125rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .card__description p {
+    font-size: 0.75rem;
+  }
+
+  .card__button {
+    font-size: 0.75rem;
+  }
+
+  .footer__wrapper li p {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .getting-started .getting-started__header p {
+    font-size: 0.8rem;
+  }
+
+  .footer__wrapper li p {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .cards {
+    height: 12.5rem;
+  }
+
+  .card,
+  .modal__card,
+  .modal__card__content {
+    height: 6rem;
+  }
+
+  .card__description p {
+    font-size: 0.65rem;
+  }
+
+  .card__button {
+    font-size: 0.55rem;
+  }
+
+  .schedule h1 {
+    font-size: 1.25rem;
+  }
+
+  .schedule button {
+    width: 7rem;
+    font-size: 0.5rem;
+    height: 1.25rem;
+  }
+
+  .getting-started {
+    height: 13.75rem;
+  }
+
+  .getting-started .getting-started__header h3 {
+    font-size: 0.9rem;
+    line-height: 1.05rem;
+  }
+
+  .getting-started .getting-started__header p {
+    font-size: 0.65rem;
+    line-height: 1rem;
+  }
+
+  .getting-started__action h5 {
+    font-size: 0.75rem;
+  }
+
+  .getting-started__action p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .schedule h1 {
+    font-size: 0.8rem;
+  }
+
+  .schedule button {
+    width: 5rem;
+    font-size: 0.4rem;
+  }
+
+  .getting-started .getting-started__header p {
+    font-size: 0.55rem;
+    line-height: 1rem;
+  }
+}
+
+.hide {
+  display: none;
+}
