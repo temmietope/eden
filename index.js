@@ -3,15 +3,19 @@ const modalCard = document.querySelector('.modal__card')
 const backdrop = document.querySelector('.modal__backdrop')
 const modalList = document.querySelector('.modal__list')
 const lightBox = document.querySelector('.lightbox')
+const lightBoxImageDiv = document.querySelector('.lightbox__image')
 const headerCard = document.querySelector('.card--orange')
 const modalHeader = document.querySelector('.modal__header')
 const footer = document.querySelector('footer')
 const close = document.querySelectorAll('.close-modal')
 const body = document.body
-const clickableImage = document.querySelector('.image__clickable')
-const enlargedImage = document.querySelector('.enlarged__image')
+const clickableImage = document.querySelectorAll('.image__clickable')
 
-const toggleModal = (e) => {
+let image = document.createElement('IMG')
+image.setAttribute('alt', 'lightbox-image')
+image.setAttribute('class', 'enlarged__image')
+
+const toggleModal = () => {
   headerCard.classList.toggle('hide')
   modalHeader.classList.toggle('hide')
   footer.classList.toggle('hide')
@@ -40,7 +44,8 @@ modalList.addEventListener('click', (e) => e.stopPropagation())
 lightBox.addEventListener('click', (e) => {
   e.stopPropagation()
 })
-enlargedImage.addEventListener('click', (e) => {
+
+image.addEventListener('click', (e) => {
   e.stopPropagation()
 })
 
@@ -67,14 +72,26 @@ window.addEventListener('resize', () => {
   )
 })
 
-const showLightBox = () => {
-  let rect = clickableImage.getBoundingClientRect()
-  lightBox.style.transformOrigin = `${(rect.left+rect.right)/2}px ${(rect.top+rect.bottom)/2}px`
+const showLightBox = (e) => {
+  let rect = e.target.getBoundingClientRect()
+  if (e.target.classList.contains('image__clear')) {
+    image.setAttribute('src', './assets/images/lightbox.png')
+  } else {
+    image.setAttribute('src', e.target.src)
+  }
+  lightBoxImageDiv.appendChild(image)
+
+  lightBox.style.transformOrigin = `${(rect.left + rect.right) / 2}px ${
+    (rect.top + rect.bottom) / 2
+  }px`
   lightBox.classList.add('show')
 }
 
 const closeLightBox = () => {
   lightBox.classList.remove('show')
 }
-lightBox.addEventListener('click', closeLightBox)
-clickableImage.addEventListener('click', showLightBox)
+lightBoxImageDiv.addEventListener('click', closeLightBox)
+
+clickableImage.forEach((item) => {
+  item.addEventListener('click', showLightBox)
+})
